@@ -1,0 +1,32 @@
+body{
+    text-align:center;
+    font-family:Arial;
+    }
+    
+    .container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+    }
+    
+    #farol{
+    width:120px;
+    background:black;
+    padding:10px;
+    border-radius:10px;
+    }
+    
+    .luz{
+    width:80px;
+    height:80px;
+    background:gray;
+    margin:10px auto;
+    border-radius:50%;
+    }
+    
+    #mensagem{
+    font-size:30px;
+    font-weight:bold;
+    width:200px;
+    }
