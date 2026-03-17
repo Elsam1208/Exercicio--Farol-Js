@@ -29,5 +29,33 @@ function mudarCor(cor){
     mensagem.innerHTML = "👍 SIGA";
     
     }
-    
+
+    / ==============================
+// 🚦 PARTE AUTOMÁTICA
+// ==============================
+
+let cores = ["verde", "amarelo", "vermelho"];
+let index = 0;
+let intervalo;
+
+// troca automática
+function modoAutomatico(){
+    mudarCor(cores[index]);
+    index = (index + 1) % cores.length;
+}
+
+// reinicia o tempo quando clicar
+function reiniciar(){
+    clearInterval(intervalo);
+    intervalo = setInterval(modoAutomatico, 3000);
+}
+
+// inicia automático ao abrir
+modoAutomatico();
+intervalo = setInterval(modoAutomatico, 3000);
+
+// opcional: faz os botões reiniciarem o tempo
+document.querySelectorAll("button").forEach(btn => {
+    btn.addEventListener("click", reiniciar);
+}); 
     }
